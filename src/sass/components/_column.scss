@@ -1,0 +1,10 @@
+.column {
+    width: 30%;
+    border: 1px solid black;
+    padding: 0.5rem;
+
+    .column-header {
+        display: flex;
+        justify-content: space-between;
+    }
+}

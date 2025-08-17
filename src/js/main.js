@@ -1,14 +1,14 @@
-import { modalHtml } from './components/modalManager';
+import { templateModal } from './components/modalManager';
 import { handlerBtn } from './components/modalManager';
 import { data } from './components/data';
 import { htmlBoard } from './components/board';
+import { drawCard } from './components/boardManager';
+export const newTaskButton = document.getElementById('new-task')
+export const board = document.getElementById('board')
+const root = document.getElementById('app')
+
 function app() {
-    document.addEventListener('DOMContentLoaded', () => {
-        document.getElementById('wrapper').insertAdjacentHTML('beforeend', modalHtml())
-    })
-    document.getElementById('new-task').addEventListener('click', () => {
-        document.getElementById('task-modal').style.display = 'block'
-    })
-    document.getElementById('board').innerHTML = htmlBoard(data)
+    root.appendChild(templateModal())
+    htmlBoard(data)
 }
 app()

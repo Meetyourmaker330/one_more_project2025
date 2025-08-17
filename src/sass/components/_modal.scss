@@ -1,5 +1,4 @@
 .modal {
-    display: none;
     position: absolute;
     left: calc(50% - 200px);
     top: calc(50% - 200px);
@@ -14,4 +13,12 @@
         flex-direction: column;
         justify-content: space-around;
     }
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
 }
